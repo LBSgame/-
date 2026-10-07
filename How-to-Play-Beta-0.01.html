@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Play · LBSgame Stock Sim Trader Beta 0.01</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23c2410c'/%3E%3Cpath d='M10 44 24 30l8 8 12-16 10 8' fill='none' stroke='%23fff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<style>
+  :root{ --bg:#f3f5f7; --card:#fff; --line:#e5e9ee; --ink:#1a2533; --mut:#6b7787; --accent:#c2410c; --accent2:#0f766e; --up:#e11d48; --down:#16a34a; }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Inter","PingFang SC","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--ink); line-height:1.6; padding:24px 16px;}
+  .wrap{max-width:820px; margin:0 auto;}
+  header{background:linear-gradient(135deg,#1f2937,#111827); color:#fff; border-radius:18px; padding:28px; margin-bottom:20px;}
+  header h1{font-size:26px; font-weight:800; margin-bottom:6px;}
+  header p{color:#cbd5e1; font-size:14px;}
+  header .ver{display:inline-block; margin-top:10px; background:var(--accent); color:#fff; padding:4px 12px; border-radius:20px; font-size:12px; font-weight:700;}
+  .card{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:20px 22px; margin-bottom:16px;}
+  .card h2{font-size:17px; font-weight:800; margin-bottom:10px; display:flex; align-items:center; gap:10px;}
+  .card h2 .num{width:28px; height:28px; border-radius:8px; background:var(--accent); color:#fff; display:inline-flex; align-items:center; justify-content:center; font-size:14px; flex:none;}
+  .card h3{font-size:14px; font-weight:700; margin:14px 0 6px; color:var(--accent);}
+  p, li{font-size:14px; color:var(--ink);}
+  ul, ol{padding-left:22px; margin:6px 0;}
+  li{margin-bottom:6px;}
+  .tip{background:#fffbeb; border:1px solid #fde68a; color:#92400e; border-radius:10px; padding:10px 14px; font-size:13px; margin-top:10px;}
+  .good{background:#f0fdf4; border:1px solid #bbf7d0; color:#15803d; border-radius:10px; padding:10px 14px; font-size:13px; margin-top:10px;}
+  .bad{background:#fff1f2; border:1px solid #fecdd3; color:#9f1239; border-radius:10px; padding:10px 14px; font-size:13px; margin-top:10px;}
+  table{width:100%; border-collapse:collapse; margin:10px 0; font-size:13px;}
+  th{background:#f8fafc; text-align:left; padding:8px; border-bottom:2px solid var(--line); color:var(--mut); font-weight:600;}
+  td{padding:8px; border-bottom:1px solid #eef1f5;}
+  .up{color:var(--up); font-weight:700;}
+  .down{color:var(--down); font-weight:700;}
+  code{background:#f1f5f9; padding:2px 6px; border-radius:5px; font-size:12px; font-family:ui-monospace,Menlo,monospace;}
+  .kbd{background:#fff; border:1px solid var(--line); border-bottom-width:2px; padding:2px 7px; border-radius:5px; font-size:12px; font-family:ui-monospace,Menlo,monospace;}
+  footer{font-size:11px; color:var(--mut); text-align:center; margin-top:24px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1>LBSgame Stock Sim Trader</h1>
+    <p>A classroom virtual-stock-trading game with real-time US quotes and virtual money.</p>
+    <span class="ver">Beta 0.01 · How to Play</span>
+  </header>
+
+  <section class="card">
+    <h2><span class="num">1</span> What is this?</h2>
+    <p>This is a single HTML file you open in any browser. You and your classmates each get a virtual wallet, buy real US stocks with real-time prices, and sell whenever you want. The goal: end the week with the biggest total assets.</p>
+    <div class="tip">Real quotes, virtual money. Nothing here is real investing and nothing is saved to the cloud — it only lives on your own browser.</div>
+  </section>
+
+  <section class="card">
+    <h2><span class="num">2</span> Getting started (30 seconds)</h2>
+    <ol>
+      <li>Double-click <code>LBSgame.Stock.Sim.Trader.Beta.0.01.html</code> to open it in Chrome / Edge / Safari / mobile browser.</li>
+      <li>Wait 2–3 seconds for the prices to load (top right shows <em>"Updated ..."</em>).</li>
+      <li>If it says <em>"Couldn't load live quotes"</em>, check your internet and press <span class="kbd">Refresh quotes</span>.</li>
+    </ol>
+  </section>
+
+  <section class="card">
+    <h2><span class="num">3</span> Add players</h2>
+    <p>Scroll to <strong>"Add player"</strong>, type a nickname (e.g. Alex), enter a starting capital (default <code>$1000</code>), then press <span class="kbd">+ Add player</span>.</p>
+    <ul>
+      <li>Each player can have a <strong>different starting capital</strong> — that's fine, it's just for fun.</li>
+      <li>Switch between players any time with the dropdown in the dark top bar.</li>
+      <li>The dark bar shows the <strong>current player's</strong> Cash / Positions value / Total assets.</li>
+      <li>Press <span class="kbd">×</span> next to a player to remove them (you'll be asked to confirm).</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2><span class="num">4</span> Buy a stock</h2>
+    <ol>
+      <li>Make sure the player you want is selected in the dark top bar.</li>
+      <li>In any quote card (Roblox, Nvidia, etc.), type the dollar amount you want to spend in the input.</li>
+      <li>Press <span class="kbd">Buy</span>. Cash is deducted instantly and the stock shows up in <strong>"Current player's holdings"</strong>.</li>
+    </ol>
+    <div class="good">Tip: enter <em>all</em> your remaining cash for an "all-in" move.</div>
+    <div class="bad">If you see <em>"Insufficient cash"</em>, enter a smaller number — the game won't let you spend more than you have.</div>
+    <table>
+      <tr><th>Stock</th><th>Ticker</th><th>Industry</th></tr>
+      <tr><td>Roblox / Electronic Arts</td><td>RBLX / EA</td><td>Gaming</td></tr>
+      <tr><td>Estée Lauder / Ulta Beauty</td><td>EL / ULTA</td><td>Beauty</td></tr>
+      <tr><td>Netflix / Disney</td><td>NFLX / DIS</td><td>Media</td></tr>
+      <tr><td>Nvidia / Microsoft</td><td>NVDA / MSFT</td><td>AI / Tech</td></tr>
+      <tr><td>JPMorgan / Bank of America</td><td>JPM / BAC</td><td>Finance</td></tr>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2><span class="num">5</span> Sell (cash out)</h2>
+    <p>Scroll to <strong>"Current player's holdings"</strong>. On each row press <span class="kbd">Sell</span>, then:</p>
+    <ul>
+      <li>Leave the quantity field blank to sell <strong>everything</strong> of that stock.</li>
+      <li>Or type a number of shares to sell only part.</li>
+      <li>Press <span class="kbd">Confirm sell</span>. Cash goes back into the player's wallet at the live price.</li>
+    </ul>
+    <p>The game automatically tracks:</p>
+    <ul>
+      <li><strong>Unrealized P&L</strong> — profit/loss on what you still hold.</li>
+      <li><strong>Realized P&L</strong> — profit/loss on what you've already sold.</li>
+      <li><strong>Total P&L</strong> = unrealized + realized.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2><span class="num">6</span> Read the dashboard</h2>
+    <table>
+      <tr><th>Item</th><th>What it means</th></tr>
+      <tr><td>Cash</td><td>Money the player hasn't invested yet</td></tr>
+      <tr><td>Positions value</td><td>What all holdings are worth right now</td></tr>
+      <tr><td>Total assets</td><td>Cash + positions value (this is your score)</td></tr>
+      <tr><td>P&L%</td><td>Green = losing, Red = winning (US convention: red = up)</td></tr>
+      <tr><td>Bar chart</td><td>Unrealized P&L per holding for the current player</td></tr>
+    </table>
+    <div class="tip">Colors follow the US market: <span class="up">red = price up / profit</span>, <span class="down">green = price down / loss</span>.</div>
+  </section>
+
+  <section class="card">
+    <h2><span class="num">7</span> Save & Reset</h2>
+    <ul>
+      <li><span class="kbd">Save</span> — writes everything to your browser's local storage. Next time you open the file on the <strong>same browser</strong>, your players and holdings come back.</li>
+      <li><span class="kbd">Reset</span> — wipes everything and starts a brand-new game (you'll be asked to confirm).</li>
+    </ul>
+    <div class="tip">Prices refresh automatically every 60 seconds during US market hours. Outside trading hours you'll see the previous close.</div>
+  </section>
+
+  <section class="card">
+    <h2><span class="num">8</span> Suggested class rules</h2>
+    <ul>
+      <li>Everyone starts with the same capital (e.g. $1000) and trades for one week.</li>
+      <li>Each player picks their own nickname; no peeking at others' screens until Friday.</li>
+      <li>Winner = highest Total assets at the end. Tie = whoever saved the most cash.</li>
+      <li>Optional twist: every day the teacher picks one "industry news" (e.g. AI up / retail down) and players react.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2><span class="num">9</span> Troubleshooting</h2>
+    <table>
+      <tr><th>Problem</th><th>Fix</th></tr>
+      <tr><td>Prices show "—"</td><td>Wait, or press "Refresh quotes". Check internet.</td></tr>
+      <tr><td>"Couldn't load live quotes" banner</td><td>Off-hours / network. It auto-retries every 60 s.</td></tr>
+      <tr><td>My game disappeared</td><td>You opened the file on a different browser/device, or pressed Reset. Save after each session.</td></tr>
+      <tr><td>Numbers look odd</td><td>US market hours are 9:30–16:00 ET (evening your time). Outside that, quotes are stale.</td></tr>
+    </table>
+  </section>
+
+  <footer>
+    LBSgame Stock Sim Trader · Beta 0.01 · For classroom learning only, not investment advice.
+  </footer>
+
+</div>
+</body>
+</html>
